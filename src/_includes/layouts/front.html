@@ -1,0 +1,85 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+<div class="namearea">
+    <div class="f-h f-m-v f-align-center" style="z-index: 1000;height: 100%;">
+        <!-- TODO: Change to a nicer picture -->
+
+        <img src="assets/finn.jpg" alt="Finn's face" class="profile-pic animate-pop-in">
+
+        <div class="name-container f-v">
+            <div class="name animate-pop-in" style="animation-delay: .4s; text-align: center">
+                {{ header }}
+            </div>
+            <span class="sep animate-pop-in" style="animation-delay: .4s;"></span>
+            <span class="subname animate-pop-in" style="animation-delay: .6s; padding-right: 5px;">
+                {{ subheader }}
+            </span>
+        </div>
+    </div>
+</div>
+
+{{ content | safe }}
+<div class="webdev-area" style="text-align: center; color: black;">
+    <h3>Here are some of my projects:</h3>
+    <div class="f-h f-m-v">
+        {%- for post in collections.showcase.slice().reverse().slice(0,2) -%}
+        <a class="f-grow blogbutton" href="{{post.url}}">
+            <h2 style="color: black;">{{ post.data.pname }}</h2>
+            <img src="/{{post.data.image}}" class="smallimage">
+            <p style="color: black;">
+                {{post.data.description}}
+            </p>
+        </a>
+        {%- endfor -%}
+    </div>
+    <h3 class="seemore"><a style="color: black;" href="/showcase">See them all! ➤</a></h3>
+</div>
+
+<div class="section-top purple-gradient"></div>
+<div class=" webdev-area purple-gradient" style="text-align: center">
+
+    <h3>Checkout my blog:</h3>
+    <div class="f-h f-m-v">
+        {%- for post in collections.post.slice().reverse().slice(0,3) -%}
+        <a class="f-grow blogbutton" href="{{post.url}}">
+            <b>{{ post.data.title }}</b>
+            <p>
+                Published {{post.data.date.toDateString()}}
+            </p>
+        </a>
+        {%- endfor -%}
+    </div>
+    <h3 class="seemore"><a style="color: white;" href="/blog">See more ➤</a></h3>
+
+</div>
+
+<div class="whiteout">
+<div class="section-bottom purple-gradient"></div>
+
+{%- for post in collections.post.slice().reverse().slice(0,1) -%}
+<a class="blogbutton" href="{{post.url}}" style="text-align: center;">
+    <h1 style="color:black;">{{ post.data.title }}</h1>
+
+    <div class="f-h">
+        <div class="f-grow"></div>
+        <img src="/gallery/images/{{post.data.image}}" class="smallimage">
+        <div class="f-grow"></div>
+    </div>
+</a>
+    <h3 class="" style="text-align: center;"><a style="color: black;" href="/gallery">See more art ➤</a></h3>
+{%- endfor -%}
+
+</div>
+
+<ul>
+</ul>
+<!-- <div class="section-top purple-gradient"></div> -->
+<!-- <div class=" webdev-area purple-gradient" style="text-align: center"> -->
+<!-- <div class="webdev-text">Want to see what I do?</div> -->
+<!-- <div class="skill-heading" style="color: white;">Check out my <a class="link" href="projects.html">projects!</a></div> -->
+
+<!-- </div> -->
+<!-- <div class="section-bottom purple-gradient"></div> -->
+
+<div class="f-grow"></div>
+{% endblock %}

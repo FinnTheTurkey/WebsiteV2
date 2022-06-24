@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/stylesheet.less.css">
+    <link rel="stylesheet" href="/assets/css/duotonelight.css">
+    <style>
+        body, html, div {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class="header-area f-v" style="min-height: 100vh;">
+
+    <header class="header">
+        <div class="f-grow"></div><a href="/index.html" class="navbutton">
+            Home
+        </a><a href="/showcase" class="navbutton">
+            Showcase
+        </a><a href="/blog" class="navbutton">
+            Blog
+        </a><a href="/gallery" class="navbutton">
+            Gallery
+        </a></header>
+    
+ 
+<div class="namearea">
+    <div class="f-h f-m-v f-align-center" style="z-index: 1000;height: 100%;">
+        <!-- TODO: Change to a nicer picture -->
+
+        <img src="/assets/finn.jpg" alt="Finn's face" class="profile-pic-small animate-pop-in">
+
+            <div class="name-container f-v">
+            <div class="small-name animate-pop-in" style="animation-delay: .4s; text-align: center">
+                Finn Bainbridge<i>.ca</i>
+            </div>
+            <span class="sep animate-pop-in" style="animation-delay: .4s;"></span>
+            <span class="subname animate-pop-in" style="animation-delay: .6s; padding-right: 5px;">
+                A human being
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="section-top purple-gradient"></div>
+<div class=" webdev-area purple-gradient" style="text-align: center">
+
+    <h1>Gallery</h1>
+
+</div>
+<div class="section-bottom purple-gradient"></div>
+
+<div class="section-top whiteout"></div>
+<div class="gallery-grid whiteout">
+  <!-- TODO: Add previews of art  --><a class="blogbutton blogstyle whiteout" href="/gallery/3/" style="display: grid;padding: 5px;">
+    <div class="f-v">
+        <div class="f-grow"></div>
+        <img src="/gallery/images/../../assets/finn.jpg" class="scaledimage">
+        <div class="f-grow"></div>
+        <h1>A random screenshot</h1>
+        <h3>
+            Published Fri Jun 17 2022
+        </h3>
+    </div>
+</a><a class="blogbutton blogstyle whiteout" href="/gallery/2/" style="display: grid;padding: 5px;">
+    <div class="f-v">
+        <div class="f-grow"></div>
+        <img src="/gallery/images/1.png" class="scaledimage">
+        <div class="f-grow"></div>
+        <h1>A random screenshot</h1>
+        <h3>
+            Published Fri Jun 17 2022
+        </h3>
+    </div>
+</a><a class="blogbutton blogstyle whiteout" href="/gallery/1/" style="display: grid;padding: 5px;">
+    <div class="f-v">
+        <div class="f-grow"></div>
+        <img src="/gallery/images/../../assets/finn.png" class="scaledimage">
+        <div class="f-grow"></div>
+        <h1>A random screenshot</h1>
+        <h3>
+            Published Fri Jun 17 2022
+        </h3>
+    </div>
+</a></div>
+
+
+
+    <div class="f-h footer">
+        <div class="f-grow"></div>
+        <a href="contact.html" class="footer-icon">
+            <img src="/assets/icons/iconmonstr-email-2.svg" alt="Email icon">
+        </a>
+        <a href="https://github.com/FinnTheTurkey" class="footer-icon">
+            <img src="/assets/icons/iconmonstr-github-1.svg" alt="Github icon">
+        </a>
+        <!-- TODO: Add more -->
+        <div class="f-grow"></div>
+    </div>
+
+    <div class="f-h footer">
+        <div class="f-grow"></div>
+        <div style="text-align: center;"><i>Copyright Finn Bainbridge 2022. All rights reserved</i></div>
+        <div class="f-grow"></div>
+    </div>
+
+    <!-- "The hardest part about making a website is deciding what to put on it" - Finn 2020, with "webdeveloper's" block -->
+
+    <script>
+        document.body.classList.add("js-loading");
+        window.addEventListener("load", showPage, false);
+
+        function showPage() {
+            document.body.classList.remove("js-loading");
+        }
+    </script>
+</div>
+  </body>
+</html>

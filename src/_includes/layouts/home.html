@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+<div style="background-color: blue;">
+{% block title %}
+{% endblock %}
+</div>
+  <article>
+    {% block body %}
+    {{ content | safe }}
+    {% endblock %}
+  </article>
+{% endblock %}

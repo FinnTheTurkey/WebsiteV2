@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+<div class="namearea">
+    <div class="f-h f-m-v f-align-center" style="z-index: 1000;height: 100%;">
+        <!-- TODO: Change to a nicer picture -->
+
+        <img src="/assets/finn.jpg" alt="Finn's face" class="profile-pic-small animate-pop-in">
+
+            <div class="name-container f-v">
+            <div class="small-name animate-pop-in" style="animation-delay: .4s; text-align: center">
+                Finn Bainbridge<i>.ca</i>
+            </div>
+            <span class="sep animate-pop-in" style="animation-delay: .4s;"></span>
+            <span class="subname animate-pop-in" style="animation-delay: .6s; padding-right: 5px;">
+                {{ data.slogan }}
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-top purple-gradient"></div>
+<div class=" webdev-area purple-gradient" style="text-align: center">
+
+    <div style="padding:10px">
+    <!-- <img class="scaledimage" src="/assets/finn.jpg"> -->
+        <img class="scaledimage" src="/gallery/images/{{image}}" alt="{{title}}">
+    </div>
+    <h3>{{ title }}</h3>
+
+</div>
+
+<!-- <div class="section-top sharp-gray"></div> -->
+<div class="sharp-gray">
+<div class="section-bottom purple-gradient"></div>
+    <div class="grayzone">
+        {{ content | safe }}
+    </div>
+</div>
+
+<div class="section-bottom sharp-gray"></div>
+{% endblock %}

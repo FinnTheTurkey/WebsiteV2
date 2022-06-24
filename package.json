@@ -1,0 +1,21 @@
+{
+  "name": "websitev2",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy --config index.js",
+    "serve": "npx @11ty/eleventy --config index.js --serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eleventy": "^1.0.6",
+    "less": "^4.1.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-image-figures": "^2.1.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
+  }
+}

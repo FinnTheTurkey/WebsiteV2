@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Lato/Lato-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(../fonts/Source_Code_Pro/SourceCodePro-SemiBold.ttf);
+}

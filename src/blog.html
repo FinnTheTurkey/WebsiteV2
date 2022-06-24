@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+ 
+<div class="namearea">
+    <div class="f-h f-m-v f-align-center" style="z-index: 1000;height: 100%;">
+        <!-- TODO: Change to a nicer picture -->
+
+        <img src="/assets/finn.jpg" alt="Finn's face" class="profile-pic-small animate-pop-in">
+
+            <div class="name-container f-v">
+            <div class="small-name animate-pop-in" style="animation-delay: .4s; text-align: center">
+                Finn Bainbridge<i>.ca</i>
+            </div>
+            <span class="sep animate-pop-in" style="animation-delay: .4s;"></span>
+            <span class="subname animate-pop-in" style="animation-delay: .6s; padding-right: 5px;">
+                {{ data.slogan }}
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="section-top purple-gradient"></div>
+<div class=" webdev-area purple-gradient" style="text-align: center">
+
+    <h1>Blog</h1>
+
+</div>
+<div class="section-bottom purple-gradient"></div>
+
+<div class="blogarea">
+{%- for post in collections.post.slice().reverse() -%}
+<a class="blogbutton blogstyle whiteout" href="{{post.url}}">
+    <h1>{{ post.data.title }}</h1>
+    <h3>
+        Published {{post.data.date.toDateString()}}
+    </h3>
+        <div class="section-top whiteout "></div>
+        <div class="section-bottom whiteout "></div>
+</a>
+{%- endfor -%}
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+<style>
+
+.header-area {
+    background: {{ theme.primary }}!important;
+}
+
+.purple-gradient {
+    background: {{ theme.secondary }}!important;
+}
+</style>
+<div class="namearea">
+    <div class="f-h f-m-v f-align-center" style="z-index: 1000;height: 100%;">
+        <!-- TODO: Change to a nicer picture -->
+
+            <div class="name-container f-v">
+            <div class="small-name animate-pop-in" style="animation-delay: .4s; text-align: center;">
+                <h3>{{ pname }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% if title %}
+<div class="section-top purple-gradient"></div>
+<div class=" webdev-area purple-gradient" style="text-align: center">
+
+    <div style="padding:10px">
+    <!-- <img class="scaledimage" src="/assets/finn.jpg"> -->
+    </div>
+    <h3>{{ title }}</h3>
+
+</div>
+{% else %}
+<div class="section-top sharp-gray"></div>
+{% endif %}
+<!-- <div class="section-top sharp-gray"></div> -->
+<div class="sharp-gray">
+
+{% if title %}
+<div class="section-bottom purple-gradient"></div>
+{% endif %}
+
+    <div class="grayzone">
+        {{ content | safe }}
+    </div>
+</div>
+
+<div class="section-bottom sharp-gray"></div>
+{% endblock %}

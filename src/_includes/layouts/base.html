@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/assets/css/stylesheet.less.css">
+    <link rel="stylesheet" href="/assets/css/duotonelight.css">
+    <style>
+        body, html, div {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class="header-area f-v" style="min-height: 100vh;">
+
+    <header class="header">
+        <div class="f-grow"></div>
+        {%- for link in links -%}
+        <a href="/{{link.url}}" class="navbutton">
+            {{link.name}}
+        </a>
+        {%- endfor -%}
+    </header>
+    {% block content %}{% endblock %}
+
+
+    <div class="f-h footer">
+        <div class="f-grow"></div>
+        <a href="contact.html" class="footer-icon">
+            <img src="/assets/icons/iconmonstr-email-2.svg" alt="Email icon">
+        </a>
+        <a href="https://github.com/FinnTheTurkey" class="footer-icon">
+            <img src="/assets/icons/iconmonstr-github-1.svg" alt="Github icon">
+        </a>
+        <!-- TODO: Add more -->
+        <div class="f-grow"></div>
+    </div>
+
+    <div class="f-h footer">
+        <div class="f-grow"></div>
+        <div style="text-align: center;"><i>Copyright Finn Bainbridge {{ year }}. All rights reserved</i></div>
+        <div class="f-grow"></div>
+    </div>
+
+    <!-- "The hardest part about making a website is deciding what to put on it" - Finn 2020, with "webdeveloper's" block -->
+
+    <script>
+        document.body.classList.add("js-loading");
+        window.addEventListener("load", showPage, false);
+
+        function showPage() {
+            document.body.classList.remove("js-loading");
+        }
+    </script>
+</div>
+  </body>
+</html>
