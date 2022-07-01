@@ -11,7 +11,9 @@ module.exports = (config) => {
   config.setLibrary("md", mdLib);
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy('src/assets');
+  config.addPassthroughCopy('src/blog/assets');
   config.addPassthroughCopy('src/gallery/images');
+  config.addPassthroughCopy('src/gallery/assets');
   config.addNunjucksGlobal("year", new Date().getFullYear());
   config.addPairedNunjucksShortcode(
       "test", function(content) { return `{{ test("${content}") }}`; });
